@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Eksamen</title>
+</head>
+    <body>
+        <header>
+            <div>
+                <a href="https://www.dyrenesbeskyttelse.dk/internat/dansk-dyrevaern-aarhus">
+                <img src="billeder/Logo.png" class="logo" alt="Logo">
+                </a>
+            </div>
+        </header>
+
+        <section class="dyregif">
+            <img src="billeder/Dansk-dyreværn-aarhus.gif" alt="dyre_gif" class="dyr"> 
+        </section>
+
+        <section>
+            <p class="citat">
+                ”Jeg elsker virkelig dyr. Jeg er et af de der mærkelige mennesker, som virkelig lever af kærligheden fra dyr”
+            </p>
+        </section>
+
+        <div class="parallax-one"></div>
+
+        <section class="billede">
+            <div class="container">
+                <div class="style">
+                    <img src="billeder/dog.jpg" alt="hund" onclick="modal('hund');">
+                </div>
+                <div class="style">
+                    <img src="billeder/Bunny.jpg" alt="kanin" onclick="modal('kanin');">
+                </div>    
+                <div class="style" >
+                    <img src="billeder/cat.jpg" alt="cat" onclick="modal('kat');">
+                </div>
+                <div class="style" >
+                    <img src="billeder/bird.jpg" alt="fugl" onclick="modal('fugl');">
+                </div>
+                <div class="clearbox"></div>
+            </div>
+        </section>
+
+        <div class="parallax-two"></div>
+
+        <section class="Video_1">
+            <div class="container">
+               <h2>Her kan du lytte til Stine, som er medarbejder hos Dansk dyreværn Aarhus</h2>
+                <div class="layout">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/XPBqeBPITg0" title="YouTube video player" class="video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="knaplayout">
+                        <i class="far fa-play-circle fa-5x ikon" id="spil">&nbsp;</i>
+                        <i class="far fa-stop-circle fa-5x ikon" id="stop">&nbsp;</i>
+                    </div>
+                </div>
+            </div>
+        </section> 
+
+        <section>
+            <p class="citat">
+                ”Selvom man er fysisk aktiv, så giver det mig overskud at være her, følsen af at kunne bruges til at gøre en forskel”   
+            </p>
+        </section>
+
+        <div class="parallax-tree"></div>
+
+        <section class="dyregif">
+            <img src="billeder/Tilmeld-dig-GIF.gif" alt="tilmeldelse" class="dyr"> 
+        </section>
+
+        <!--inspiration fra codepen.io-->
+        <section class="tilmelding">
+            <div class="main">
+                <h2>Tilmelding til Dansk dyreværn Aarhus</h2>
+                <div class="form1">
+ 
+                    <input type="text" id="req1" placeholder="Fornavn"><br><br>	
+                    <input type="text" id="req2" placeholder="Efternavn"><br><br>
+                    <input type="text" id="req3" placeholder="Email-adresse"><br><br>
+                    <input type="text" id="req4" placeholder="Telefon nummer" name="phone"><br><br>
+                    <input type="text" id="req5" placeholder="Alder" name="age"><br><br>
+
+                    Køn:
+                    <select id="selection">
+                        <option value="Gender">Vælg køn</option>
+                        <option>Mand</option>
+                        <option>Kvinde</option>
+                    </select>
+                    <br><br>
+                    <input type="submit" value="Tilmed" onclick="validate();">
+                
+                </div>	
+            </div>
+            <div class="clearbox"></div>
+        </section>
+
+        <footer>
+                <div class="footer-wrap flex-container">
+                        <a href="https://www.instagram.com/danskdyrevaernaarhus/?hl=da">
+                        <img src="billeder/someinsta.png" alt="instagramlogo" class="Some">
+                        </a>
+
+                        <a href="https://www.facebook.com/danskdyrevaernaarhus/">
+                        <img src="billeder/SoMef.png" alt="facebooklogo" class="Some">
+                        </a>
+                </div>
+                <div class="clearbox"></div>
+        </footer>
+
+        <script src="js/script.js"></script>s
+
+
+        <div id="modal" onclick="closemodal();">
+            <div id="modalhund">
+                <div>
+                    <img src="billeder/Carlo.jpg" alt="hund" class="HB">
+                </div>
+                <div>
+                    <h2 class="hej">Carlo </h2>
+                    <p class="tekst">
+                        Carlo er en helt fantastisk goldenretriver, som elsker at være aktiv og lege med andre hunde. Carlo søger et hjem, hvor der er børn, som kan give en masse sjov og kærlighed.  
+                    </p>
+                </div>
+            </div>
+            <div id="modalkanin">
+                <div>
+                    <img src="billeder/Ninus.jpg" alt="kanin" class="HB">
+                </div>
+                <div>
+                    <h2 class="hej"> Ninus </h2>
+                    <p class="tekst">
+                        Kaninen Ninus blev fundet i en papkasse væk fra mad og vand. Ninus søger nu en familie, som ønsker et ekstra familiemedlem. Han elsker at blive nusset og kælet om fra alle mennesker, både voksne så vel som børn. 
+                    </p>
+                </div>
+            </div>
+            <div id="modalkat">
+                <div>
+                    <img src="billeder/Isa.jpg" alt="kat" class="HB">
+                </div>
+                <div>
+                    <h2 class="hej"> Isa </h2>
+                    <p class="tekst">
+                        Isa er en kat, som har et stort hjerte. Isa mangler en familie eller et menneske, som ønsker et støttedyr. Hun er ikke særlig vild med børn eller de vilde lege, da de skræmmer hende. Derfor er hun en god kat til ældre eller et par uden børn. 
+                    </p>
+                </div>
+            </div>
+            <div id="modalfugl">
+                <div>
+                    <img src="billeder/Sonny.jpg" alt="fugl" class="HB">
+                </div>
+                <div>
+                    <h2 class="hej"> Sonny </h2>
+                    <p class="tekst">
+                        Fuglen Sonny elsker mad i lange baner. Han er en fantastisk fugl, som giver en masse kærlighed og livsglæde til andre mennsker. Han er perfekt til en familie med, som mangler et dejligt dyr med massere af livsglæde.   
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
